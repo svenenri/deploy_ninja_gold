@@ -4,60 +4,67 @@
 		<meta charset="utf-8">
 		<title>Ninja Gold</title>
 		{% load staticfiles %}
-		<link rel="stylesheet" href="{% static 'gold_app/css/style.css' %}">
+		<link rel="stylesheet" href="{% static 'gold_app/css/foundation.css' %}">
 	</head>
 
 	<body>
-		<div class="gold">
-			<p>Your Gold:</p>
-			<p id="score">{{request.session.yourGold}}</p>
-		</div>
-		<div class="buildings">
-			<p class="title">Farm</p>
-			<p>(earns 10-20 golds)</p>
-			<form action="{% url 'ninja_gold:gold_process' %}" method="post">
-				{% csrf_token %}
-				<input type="hidden" name="building" value="farm" />
-				<input class="button" type="submit" value="Find Gold!"/>
-			</form>
-		</div>
-		<div class="buildings">
-			<p class="title">Cave</p>
-			<p>(earns 5-10 golds)</p>
-			<form action="{% url 'ninja_gold:gold_process' %}" method="post">
-				{% csrf_token %}
-				<input type="hidden" name="building" value="cave" />
-				<input class="button" type="submit" value="Find Gold!"/>
-			</form>
-		</div>
-		<div class="buildings">
-			<p class="title">House</p>
-			<p>(earns 2-5 golds)</p>
-			<form action="{% url 'ninja_gold:gold_process' %}" method="post">
-				{% csrf_token %}
-				<input type="hidden" name="building" value="house" />
-				<input class="button" type="submit" value="Find Gold!"/>
-			</form>
-		</div>
-		<div class="buildings">
-			<p class="title">Casino</p>
-			<p>(earns/takes 0-50 golds)</p>
-			<form action="{% url 'ninja_gold:gold_process' %}" method="post">
-				{% csrf_token %}
-				<input type="hidden" name="building" value="casino" />
-				<input class="button" type="submit" value="Find Gold!"/>
-			</form>
-		</div>
-		<p id="activities">Activities:</p>
-		<div class="activity">
-			<div class="border">
-				{% for activities in request.session.activity %}
-					<p id="border">{{activities}}</p>
-				{% endfor %}
+		<div class="row">
+			<div class="small-12 large-12 column">
+				<p>Your Gold:</p>
+				<p id="score">{{request.session.yourGold}}</p>
 			</div>
 		</div>
-		<form id="reset" action="{% url 'ninja_gold:gold_reset' %}">
-			<input class="button" type="submit" name="reset" value="Reset">
-		</form>
+		<div class="row">
+			<div class="small-3 large-6 column">
+				<p class="title">Farm</p>
+				<p>(earns 10-20 golds)</p>
+				<form action="{% url 'ninja_gold:gold_process' %}" method="post">
+					{% csrf_token %}
+					<input type="hidden" name="building" value="farm" />
+					<input class="button" type="submit" value="Find Gold!"/>
+				</form>
+			</div>
+			<div class="small-3 large 6 column">
+				<p class="title">Cave</p>
+				<p>(earns 5-10 golds)</p>
+				<form action="{% url 'ninja_gold:gold_process' %}" method="post">
+					{% csrf_token %}
+					<input type="hidden" name="building" value="cave" />
+					<input class="button" type="submit" value="Find Gold!"/>
+				</form>
+			</div>
+			<div class="small-3 large-6 column">
+				<p class="title">House</p>
+				<p>(earns 2-5 golds)</p>
+				<form action="{% url 'ninja_gold:gold_process' %}" method="post">
+					{% csrf_token %}
+					<input type="hidden" name="building" value="house" />
+					<input class="button" type="submit" value="Find Gold!"/>
+				</form>
+			</div>
+			<div class="small-3 large-6 column">
+				<p class="title">Casino</p>
+				<p>(earns/takes 0-50 golds)</p>
+				<form action="{% url 'ninja_gold:gold_process' %}" method="post">
+					{% csrf_token %}
+					<input type="hidden" name="building" value="casino" />
+					<input class="button" type="submit" value="Find Gold!"/>
+				</form>
+			</div>
+		</div>
+		<div class="row">
+			<p class="small-6 large-6 column">Activities:</p>
+			<form class="small-6 large-6 column" action="{% url 'ninja_gold:gold_reset' %}">
+				<input class="button" type="submit" name="reset" value="Reset Activities">
+			</form>
+			<div class="small-12 large-12 column">
+				<div class="border">
+					{% for activities in request.session.activity %}
+						<p id="border">{{activities}}</p>
+					{% endfor %}
+				</div>
+			</div>
+
+		</div>
 	</body>
 </html>
