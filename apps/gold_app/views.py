@@ -2,6 +2,9 @@ from django.shortcuts import render, redirect, HttpResponse
 from django.core.urlresolvers import reverse
 from .models import GoldGame
 import random
+from os.path import join, dirname
+from dotenv import load_dotenv
+import os
 
 # Declare all global values
 activity = []
@@ -21,22 +24,22 @@ def process(request):
 			yourGold = request.session['yourGold']
 		counter = 0
 		ninjaGold = GoldGame(click)
-		if click == "farm":
+		if click == os.environ.get("FARM"):
 			random = ninjaGold.randomGold()
 			yourGold += random
 			act = ninjaGold.getActivity(random)
 			activity.append(act)
-		elif click == "cave":
+		elif click == os.environ.get("CAVE"):
 			random = ninjaGold.randomGold()
 			yourGold += random
 			act = ninjaGold.getActivity(random)
 			activity.append(act)
-		elif click == "house":
+		elif click == os.environ.get("HOUSE"):
 			random = ninjaGold.randomGold()
 			yourGold += random
 			act = ninjaGold.getActivity(random)
 			activity.append(act)
-		elif click == "casino":
+		elif click == os.environ.get("CASINO"):
 			random = ninjaGold.randomGold()
 			yourGold += random
 			act = ninjaGold.getActivity(random)
