@@ -24,22 +24,22 @@ def process(request):
 			yourGold = request.session['yourGold']
 		counter = 0
 		ninjaGold = GoldGame(click)
-		if click == os.environ.get("FARM"):
+		if click == "farm":
 			random = ninjaGold.randomGold()
 			yourGold += random
 			act = ninjaGold.getActivity(random)
 			activity.append(act)
-		elif click == os.environ.get("CAVE"):
+		elif click == "cave":
 			random = ninjaGold.randomGold()
 			yourGold += random
 			act = ninjaGold.getActivity(random)
 			activity.append(act)
-		elif click == os.environ.get("HOUSE"):
+		elif click == "house":
 			random = ninjaGold.randomGold()
 			yourGold += random
 			act = ninjaGold.getActivity(random)
 			activity.append(act)
-		elif click == os.environ.get("CASINO"):
+		elif click == "casino":
 			random = ninjaGold.randomGold()
 			yourGold += random
 			act = ninjaGold.getActivity(random)
