@@ -9,7 +9,7 @@ import os
 # Declare all global values
 activity = []
 
-# Project views
+# Project views 
 def index(request):
 	return render(request, 'gold_app/index.html')
 
