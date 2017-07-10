@@ -1,4 +1,6 @@
 deploy:
+  language: python
+  install: pip install -r requirements.txt
   provider: s3
   access_key_id: AKIAJ43FXUNZFD7YLA4A
   secret_access_key:
