@@ -1,9 +1,0 @@
-deploy:
-  language: python
-  install: pip install -r requirements.txt
-  provider: s3
-  access_key_id: AKIAJ43FXUNZFD7YLA4A
-  secret_access_key:
-    secure: iEYTTUrBaO+3mOY1CCk7OgwJ3sIEGh+P2BusRB3WKsjA9qC1vWF3HUWHL4B0TtJ/l+h+p/IVekjuxfTO6Fx971Qxgv56W7KTRUWBzWAgEfu7Y5dWn70LXA4QcbKGY9YoJ+0A0i85gjdkEXI9YSkeOKBI9Ua/Ikt8eCl04klsG6UUg9iSgsIi822zubIBFKBbDx3Jwos82vZzrlNRQkXAWpchfSPo9iME2SRkfcIRW9rxlpm7FqLM8wUnxEDfd5N2PnKpKgRozSUZG7U2oBOBeRVou7vy1TYVf6mVOvdIzNle+KV/SIb4V7Qqrq6D2Bv8km/2Bk211rXSTFVm2L6/1S3k7LMpeiWbwMFO5PsJ8XhVXPfmfeBeViQzncu9Ryr1zfKzubfwqA6ojQzeMHTlfYUduK/GDAaAU+dn9RO1kfWOlIxj6ELTnpp2Z70e5eM4oZAKaHR5y+Cu6x+agtolh4RLdK89hIi6g/Ui0+MSMuatcvynuZqoHNxDZwI9rGe+0Oln/qBuANarlnKr5lO0ESfk9MHAyg8aqx6hqCF0QFPG+V9XDX+qm7Gqj1BPUBqwRu2p+vI3ZGIZfqEx8I3MCgPShv4J7JgZcVqBExk7hFQntdRsnEqMgYfHusydpswEehNTwfz4dk9REK4fYNOcmkY5wVmS91WCy58T0u6CQwc=
-  bucket: travisci-test-excella
-  skip_cleanup: true

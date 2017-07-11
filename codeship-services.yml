@@ -1,0 +1,4 @@
+beltexam:
+  build:
+    image: ninjagold
+    dockerfile_path: Dockerfile
