@@ -1,5 +1,4 @@
 {
-  "networkMode": "bridge",
   "requiresAttributes": [
     {
       "value": null,

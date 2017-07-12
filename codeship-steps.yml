@@ -2,6 +2,6 @@
   service: beltexam
   command: pip install -r requirements.txt
 - service: awsdeployment
-  command: aws ecs register-task-definition --cli-input-json file://webtask.json
+  command: aws ecs register-task-definition --cli-input-json file:/webtask.json
 - service: awsdeployment
   command: aws ecs update-service --service ninjs-gold-test --task-definition webtask
