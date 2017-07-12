@@ -1,4 +1,12 @@
 {
+  "requiresAttributes": [
+    {
+      "value": [],
+      "name": "com.amazonaws.ecs.capability.ecr-auth",
+      "targetId": [],
+      "targetType": []
+    }
+  ],
   "taskDefinitionArn": "arn:aws:ecs:us-east-2:090999229429:task-definition/ninja-gold:1",
   "networkMode": "bridge",
   "status": "ACTIVE",
