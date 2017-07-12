@@ -1,25 +1,25 @@
 {
   "requiresAttributes": [
     {
-      "value": null,
+      "value": [],
       "name": "com.amazonaws.ecs.capability.ecr-auth",
-      "targetId": null,
-      "targetType": null
+      "targetId": [],
+      "targetType": []
     }
   ],
   "taskDefinitionArn": "arn:aws:ecs:us-east-2:090999229429:task-definition/ninja-gold:1",
   "networkMode": "bridge",
   "status": "ACTIVE",
   "revision": 1,
-  "taskRoleArn": null,
+  "taskRoleArn": [],
   "containerDefinitions": [
     {
       "volumesFrom": [],
       "memory": 300,
-      "extraHosts": null,
-      "dnsServers": null,
-      "disableNetworking": null,
-      "dnsSearchDomains": null,
+      "extraHosts": [],
+      "dnsServers": [],
+      "disableNetworking": [],
+      "dnsSearchDomains": [],
       "portMappings": [
         {
           "hostPort": 8000,
@@ -27,25 +27,25 @@
           "protocol": "tcp"
         }
       ],
-      "hostname": null,
+      "hostname": [],
       "essential": true,
       "entryPoint": [],
       "mountPoints": [],
       "name": "ninjagold",
-      "ulimits": null,
-      "dockerSecurityOptions": null,
+      "ulimits": [],
+      "dockerSecurityOptions": [],
       "environment": [],
       "links": [],
-      "workingDirectory": null,
-      "readonlyRootFilesystem": null,
+      "workingDirectory": [],
+      "readonlyRootFilesystem": [],
       "image": "090999229429.dkr.ecr.us-east-2.amazonaws.com/codeship-test-cluster:latest",
       "command": [],
-      "user": null,
-      "dockerLabels": null,
-      "logConfiguration": null,
+      "user": [],
+      "dockerLabels": [],
+      "logConfiguration": [],
       "cpu": 10,
-      "privileged": null,
-      "memoryReservation": null
+      "privileged": [],
+      "memoryReservation": []
     }
   ],
   "placementConstraints": [],
