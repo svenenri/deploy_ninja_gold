@@ -1,4 +1,6 @@
 *.pyc
 .DS_Store
 venv/
-.env
+codeship.aes
+env
+env.encrypted
