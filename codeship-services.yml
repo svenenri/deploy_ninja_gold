@@ -4,6 +4,7 @@ ninja-gold:
     context: .
     image: 090999229429.dkr.ecr.us-east-2.amazonaws.com/gold-test
     dockerfile: Dockerfile
+  encrypted_env_file: aws-deployment.env.encrypted
 aws_dockercfg:
   image: codeship/aws-ecr-dockercfg-generator
   add_docker: true
