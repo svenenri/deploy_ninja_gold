@@ -15,4 +15,4 @@
 - name: aws ecs update service
   service: ninja-gold
   tag: master
-  command: aws ecs update-service --service ninja-gold-test --task-definition webtask
+  command: aws ecs update-service --service ninja-gold-test --task-definition webtask --debug
