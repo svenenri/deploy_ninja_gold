@@ -5,7 +5,7 @@
   image_name: 090999229429.dkr.ecr.us-east-2.amazonaws.com/gold-test
   registry: https://090999229429.dkr.ecr.us-east-2.amazonaws.com
   dockercfg_service: aws_dockercfg
-- name: python 
+- name: python
   service: ninja-gold
   command: pip install -r requirements.txt
 - name: activate new build corresponding task
@@ -15,4 +15,4 @@
 - name: aws ecs update service
   service: ninja-gold
   tag: master
-  command: aws ecs update-service --service ninja-gold-test --task-definition webtask --region us-east-2 --debug
+  command: aws ecs update-service --service ninja-gold --task-definition webtask --region us-east-2 --debug
