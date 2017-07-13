@@ -1,9 +1,18 @@
+- name: push to ECR
+  service: ninja_gold
+  type: push
+  tag: master
+  image_name: 090999229429.dkr.ecr.us-east-2.amazonaws.com/gold-test
+  registry: https://090999229429.dkr.ecr.us-east-2.amazonaws.com
+  dockercfg_service: aws_dockercfg
 - name: python
   service: beltexam
   command: pip install -r requirements.txt
-- name: aws deployment register task definition
-  service: awsdeployment
-  command: aws ecs register-task-definition --cli-input-json file:///deply_ninja_gold/webtask.json --debug
+- name: activate new build corresponding task
+  service: ninja_gold
+  tag: master
+  command: aws ecs register-task-definition --cli-input-json file://webtask.json --debug
 - name: aws ecs update service
   service: awsdeployment
-  command: aws ecs update-service --service ninjs-gold-test --task-definition webtask
+  tag: master
+  command: aws ecs update-service --service ninja-gold-test --task-definition webtask
