@@ -11,14 +11,13 @@
     "networkMode": "bridge",
     "status": "ACTIVE",
     "revision": 1,
-    "taskRoleArn": [],
     "containerDefinitions": [
       {
         "volumesFrom": [],
         "memory": 300,
         "extraHosts": [],
         "dnsServers": [],
-        "disableNetworking": [],
+        "disableNetworking": false,
         "dnsSearchDomains": [],
         "portMappings": [
           {
@@ -36,16 +35,13 @@
         "dockerSecurityOptions": [],
         "environment": [],
         "links": [],
-        "workingDirectory": [],
-        "readonlyRootFilesystem": [],
+        "readonlyRootFilesystem": false,
         "image": "090999229429.dkr.ecr.us-east-2.amazonaws.com/codeship-test-cluster:latest",
         "command": [],
-        "user": [],
-        "dockerLabels": [],
-        "logConfiguration": [],
+        "dockerLabels": {},
+        "logConfiguration": {},
         "cpu": 10,
-        "privileged": [],
-        "memoryReservation": []
+        "privileged": false
       }
     ],
     "placementConstraints": [],
