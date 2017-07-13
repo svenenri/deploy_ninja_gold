@@ -8,7 +8,14 @@
         "dnsServers": [],
         "disableNetworking": false,
         "dnsSearchDomains": [],
-        "logConfiguration": {},
+        "logConfiguration": {
+          "logDriver": "awslogs",
+          "options": {
+            "awslogs-group": "awslogs-test",
+            "awslogs-region": "us-east-2",
+            "awslogs-stream-prefix": "nginx"
+            }
+          },
         "portMappings": [
           {
             "hostPort": 8000,
