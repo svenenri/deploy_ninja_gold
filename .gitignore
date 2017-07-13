@@ -7,5 +7,3 @@ env.encrypted
 git-push-gold.sh
 aws-deployment.env
 jsonvars.env.encrypted
-editjson.sh
-editjson.py
