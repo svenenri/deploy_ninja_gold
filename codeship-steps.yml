@@ -6,7 +6,7 @@
   registry: https://090999229429.dkr.ecr.us-east-2.amazonaws.com
   dockercfg_service: aws_dockercfg
 - name: python
-  service: beltexam
+  service: ninja_gold
   command: pip install -r requirements.txt
 - name: activate new build corresponding task
   service: ninja_gold
