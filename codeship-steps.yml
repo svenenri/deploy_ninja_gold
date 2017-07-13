@@ -3,7 +3,7 @@
   command: pip install -r requirements.txt
 - name: aws deployment register task definition
   service: awsdeployment
-  command: aws ecs register-task-definition --cli-input-json file://backend.json
+  command: aws ecs register-task-definition --cli-input-json file://webtask.json --debug
 - name: aws ecs update service
   service: awsdeployment
-  command: aws ecs update-service --service ninjs-gold-test --task-definition backend
+  command: aws ecs update-service --service ninjs-gold-test --task-definition webtask
