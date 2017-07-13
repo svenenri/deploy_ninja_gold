@@ -1,8 +1,8 @@
 
-ninja_gold:
+ninja-gold:
   build:
     context: .
-    image: ninja_gold
+    image: ninja-gold
     dockerfile: Dockerfile
 aws_dockercfg:
   image: codeship/aws-ecr-dockercfg-generator
