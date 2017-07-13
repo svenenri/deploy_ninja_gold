@@ -5,7 +5,7 @@
   image_name: 090999229429.dkr.ecr.us-east-2.amazonaws.com/gold-test
   registry: https://090999229429.dkr.ecr.us-east-2.amazonaws.com
   dockercfg_service: aws_dockercfg
-- name: python
+- name: python 
   service: ninja-gold
   command: pip install -r requirements.txt
 - name: activate new build corresponding task
