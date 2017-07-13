@@ -24,7 +24,7 @@
         "environment": [],
         "links": [],
         "readonlyRootFilesystem": false,
-        "image": "090999229429.dkr.ecr.us-east-2.amazonaws.com/codeship-test-cluster:latest",
+        "image": "090999229429.dkr.ecr.us-east-2.amazonaws.com/gold-test",
         "command": [],
         "dockerLabels": {},
         "cpu": 10,
