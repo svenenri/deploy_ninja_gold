@@ -5,9 +5,12 @@
   image_name: 090999229429.dkr.ecr.us-east-2.amazonaws.com/gold-test
   registry: https://090999229429.dkr.ecr.us-east-2.amazonaws.com
   dockercfg_service: aws_dockercfg
-- name: python
+- name: python requirements
   service: ninja-gold
   command: pip install -r requirements.txt
+- name: inject encrypted vars
+  service: ninja-gold
+  command: ./editjson.sh
 - name: activate new build corresponding task
   service: ninja-gold
   tag: master
@@ -15,4 +18,4 @@
 - name: aws ecs update service
   service: ninja-gold
   tag: master
-  command: aws ecs update-service --service ninja-gold --task-definition ninja-gold --cluster=gold-test --service gold-task --region us-east-2 --debug
+  command: aws ecs update-service --cluster=gold-test --service gold-task --task-definition ninja-gold --region us-east-2 --debug
