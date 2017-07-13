@@ -13,6 +13,6 @@
   tag: master
   command: aws ecs register-task-definition --cli-input-json file://webtask.json --debug
 - name: aws ecs update service
-  service: awsdeployment
+  service: ninja_gold
   tag: master
   command: aws ecs update-service --service ninja-gold-test --task-definition webtask

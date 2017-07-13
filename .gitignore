@@ -4,3 +4,4 @@ venv/
 codeship.aes
 env
 env.encrypted
+git-push-gold.sh
