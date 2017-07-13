@@ -11,8 +11,8 @@
 - name: activate new build corresponding task
   service: ninja-gold
   tag: master
-  command: aws ecs register-task-definition --cli-input-json file://webtask.json --debug
+  command: aws ecs register-task-definition --cli-input-json file://webtask.json --region us-east-2 --debug
 - name: aws ecs update service
   service: ninja-gold
   tag: master
-  command: aws ecs update-service --service ninja-gold-test --task-definition webtask --debug
+  command: aws ecs update-service --service ninja-gold-test --task-definition webtask --region us-east-2 --debug
