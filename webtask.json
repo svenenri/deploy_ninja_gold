@@ -27,7 +27,6 @@
         "image": "090999229429.dkr.ecr.us-east-2.amazonaws.com/codeship-test-cluster:latest",
         "command": [],
         "dockerLabels": {},
-        "logConfiguration": {},
         "cpu": 10,
         "privileged": false
       }
