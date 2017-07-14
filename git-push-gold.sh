@@ -1,5 +1,5 @@
 #!/bin/bash
 
 git add .
-git commit -m "Minor updates."
+git commit -m "Testing injection of vars into json file."
 git push
