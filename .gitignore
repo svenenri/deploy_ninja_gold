@@ -6,3 +6,4 @@ env
 env.encrypted
 git-push-gold.sh
 aws-deployment.env
+not-webtask.json
