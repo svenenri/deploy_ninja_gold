@@ -24,7 +24,7 @@
         "environment": [],
         "links": [],
         "readonlyRootFilesystem": false,
-        "image": "090999229429.dkr.ecr.us-east-2.amazonaws.com/gold-test",
+        "image": "image-placeholder",
         "command": [],
         "dockerLabels": {},
         "cpu": 10,

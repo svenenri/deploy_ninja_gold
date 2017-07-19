@@ -8,6 +8,9 @@
 - name: python requirements
   service: ninja-gold
   command: pip install -r requirements.txt
+- name: inject encrypted vars
+  service: ninja-gold
+  command: bash ./editjson.sh
 - name: activate new build corresponding task
   service: ninja-gold
   tag: master
